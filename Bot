@@ -1,0 +1,20 @@
+def menu(Tipo):
+    str_retorno = ''
+    menu_Dic = {
+        "Prin": {
+            "0": "sair",
+            "1": "Comidas",
+        },
+        "1": {
+            "S": {"nome": "Sanduíche", "valor": 5.0},
+            "C": {"nome": "Cuscuz", "valor": 13.0},
+            "T": {"nome": "Tapioca", "valor": 6.0},
+        },
+    }
+
+    for c, v in menu_Dic[Tipo].items():
+        if c != '0':
+            str_retorno += c + ": " + v["nome"] + " - R$" + str(v["valor"]) + "\n"
+    
+    return str_retorno
+
